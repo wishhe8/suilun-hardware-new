@@ -58,7 +58,7 @@
   box-shadow: var(--shadow-lg); position: relative;
   background: var(--dark);
 }
-.china-photo img { width: 100%; height: 440px; object-fit: cover; opacity: 0.92; }
+.china-photo img { width: 100%; height: 440px; object-fit: cover; }
 .china-photo .img-tag {
   position: absolute; bottom: 20px; left: 20px;
   background: rgba(0,0,0,0.75); backdrop-filter: blur(8px);
@@ -75,6 +75,73 @@
 }
 .cd-chip .cd-v { font-size: 16px; font-weight: 800; color: var(--dark); }
 .cd-chip .cd-l { font-size: 11px; color: var(--gray-400); }
+
+/* AWARDS SECTION */
+.awards-section { background: white; }
+.awards-intro { max-width: 640px; margin-bottom: 48px; }
+.awards-intro p { color: var(--gray-500); font-size: 16px; line-height: 1.75; }
+.awards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media(max-width:900px) { .awards-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:480px) { .awards-grid { grid-template-columns: 1fr 1fr; } }
+.award-card {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border);
+  transition: all 0.25s;
+  background: var(--gray-50);
+}
+.award-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--orange); }
+.award-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center; }
+.award-card-label {
+  padding: 12px 14px;
+  font-size: 12px; font-weight: 600; color: var(--gray-700);
+  text-align: center; line-height: 1.4;
+}
+.china-addr {
+  margin-top: 24px; padding: 20px;
+  background: var(--gray-50); border: 1.5px solid var(--border);
+  border-radius: 12px;
+}
+.china-addr h5 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-400); margin-bottom: 10px; }
+.china-addr-row { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 8px; font-size: 14px; color: var(--gray-700); }
+.china-addr-row:last-child { margin-bottom: 0; }
+.china-addr-row .addr-icon { flex-shrink: 0; color: var(--orange); }
+
+/* AERIAL PANORAMIC STRIP */
+.aerial-strip { position: relative; overflow: hidden; height: 420px; }
+.aerial-strip img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.aerial-strip-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(26,26,26,0.72) 0%, rgba(26,26,26,0.2) 60%, rgba(26,26,26,0.4) 100%);
+  display: flex; align-items: center;
+}
+.aerial-content { padding: 0 5%; }
+.aerial-content .eyebrow { color: var(--orange); }
+.aerial-content h2 { color: white; font-size: clamp(28px,4vw,52px); max-width: 520px; line-height: 1.15; margin: 12px 0; }
+.aerial-content p { color: rgba(255,255,255,0.55); font-size: 16px; max-width: 440px; line-height: 1.65; }
+
+/* CERT DOCS SECTION */
+.cert-docs-section { background: var(--gray-50); }
+.cert-docs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+@media(max-width:768px) { .cert-docs-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:480px) { .cert-docs-grid { grid-template-columns: 1fr; } }
+.cert-doc-card {
+  border-radius: 16px; overflow: hidden;
+  box-shadow: var(--shadow); border: 1.5px solid var(--border);
+  background: white; transition: all 0.25s;
+}
+.cert-doc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--orange); }
+.cert-doc-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+.cert-doc-label {
+  padding: 14px 16px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.cert-doc-label .cert-badge {
+  background: var(--orange-pale); color: var(--orange);
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 3px 8px; border-radius: 4px; flex-shrink: 0;
+}
+.cert-doc-label span { font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.3; }
 
 /* MAP STRIP */
 .map-strip { background: var(--dark2); padding: 48px 0; }
@@ -232,6 +299,18 @@
   </div>
 </section>
 
+<!-- AERIAL PANORAMIC -->
+<div class="aerial-strip">
+  <img src="img/07335e117d34acd6ca049834f198922a.jpg" alt="Suilun Hardware Thailand Factory — Aerial Panoramic View" loading="lazy">
+  <div class="aerial-strip-overlay">
+    <div class="aerial-content">
+      <span class="eyebrow">Aerial View · Chonburi Province, Thailand</span>
+      <h2>16 Acres.<br>30,000㎡<br>Under One Roof.</h2>
+      <p>Solar-ready roofing, ERP-integrated logistics, and a full production chain — from raw steel coil to retail-ready hinge — on a single campus 30 km from Laem Chabang Port.</p>
+    </div>
+  </div>
+</div>
+
 <!-- MAP STRIP -->
 <div class="map-strip">
   <div class="wrap">
@@ -266,20 +345,58 @@
   <div class="wrap">
     <div class="china-grid">
       <div class="china-text reveal">
-        <span class="eyebrow">China R&D & Heritage · 30+ Years</span>
-        <h2>Pinghu Hinge Co., Ltd.</h2>
-        <p>Our parent company, founded over 30 years ago in Pinghu City, Jiaxing, Zhejiang Province — the heartland of China's hardware manufacturing industry. Pinghu Hinge is the engineering and R&D backbone behind every Suilun product.</p>
-        <p>Home to our precision tooling design, electroplating chemistry expertise, new product development, and long-running relationships with the world's top steel suppliers. The decades of hard-won process knowledge developed here is what makes Suilun's quality impossible to replicate overnight.</p>
+        <span class="eyebrow">China Manufacturing Heritage · 23 Years</span>
+        <h2>Zhejiang Pinghu Hinge Co., Ltd.</h2>
+        <p>浙江省平湖铰链有限公司 — our parent company, established in Pinghu City, Jiaxing, Zhejiang Province, is one of China's largest dedicated hinge manufacturers. With 23 years of continuous operation and over 280 employees, Pinghu Hinge is the engineering and R&D backbone behind every Suilun product.</p>
+        <p>The company operates an end-to-end vertically integrated production line — from coil plate import through cutting, cold rolling, stamping, and electroplating — with 356 presses running in-house. Exports reach 100+ countries. Awarded the <strong>狮球牌 (Lion Ball)</strong> Zhejiang Province Famous Trademark.</p>
         <div class="china-detail-row">
-          <div class="cd-chip"><div class="cd-v">30+</div><div class="cd-l">Years Founded</div></div>
-          <div class="cd-chip"><div class="cd-v">Pinghu City</div><div class="cd-l">Jiaxing, Zhejiang Province</div></div>
-          <div class="cd-chip"><div class="cd-v">ISO 9001</div><div class="cd-l">Quality Certified</div></div>
-          <div class="cd-chip"><div class="cd-v">R&D Hub</div><div class="cd-l">New Product Development</div></div>
+          <div class="cd-chip"><div class="cd-v">23 Yrs</div><div class="cd-l">In Operation</div></div>
+          <div class="cd-chip"><div class="cd-v">46,600㎡</div><div class="cd-l">Factory Area</div></div>
+          <div class="cd-chip"><div class="cd-v">280</div><div class="cd-l">Employees</div></div>
+          <div class="cd-chip"><div class="cd-v">550+</div><div class="cd-l">Hinge Varieties</div></div>
+          <div class="cd-chip"><div class="cd-v">420M RMB</div><div class="cd-l">Annual Output (2022)</div></div>
+          <div class="cd-chip"><div class="cd-v">ISO 9001</div><div class="cd-l">Certified</div></div>
+        </div>
+        <div class="china-addr">
+          <h5>Addresses</h5>
+          <div class="china-addr-row"><span class="addr-icon">🏭</span><span><strong>Production Base:</strong> 浙江省平湖市独山港镇穗轮工业园区<br><em>Suilun Industrial Park, Dushangang Town, Pinghu City, Zhejiang</em></span></div>
+          <div class="china-addr-row"><span class="addr-icon">🏢</span><span><strong>Trade Office:</strong> 嘉兴市南湖区中环广场西区A座601-602室<br><em>Room 601-602, Block A, Zhonghuan Plaza West, Nanhu District, Jiaxing</em></span></div>
         </div>
       </div>
       <div class="china-photo reveal d1">
-        <img src="img/4af533fcb01ea7e97c02aa66dd357814.jpg" alt="Pinghu Hinge Factory Workshop" loading="lazy">
+        <img src="img/phhinge/about_02.jpg" alt="Zhejiang Pinghu Hinge Factory — Suilun Industrial Park" loading="lazy">
         <div class="img-tag"><span class="flag">🇨🇳</span> Pinghu City, Zhejiang, China</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHINA AWARDS -->
+<section class="awards-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Honors & Recognition</span>
+      <h2>Awarded at Every Level</h2>
+    </div>
+    <div class="awards-intro reveal">
+      <p>Pinghu Hinge has been recognized by national and provincial authorities for quality, export performance, and brand excellence — building a foundation of trust that Suilun inherits and extends globally.</p>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal">
+        <img src="img/phhinge/5f8aaf7d1dcdf.jpg" alt="Zhejiang Province Famous Trademark" loading="lazy">
+        <div class="award-card-label">浙江省著名商标<br>Zhejiang Famous Trademark</div>
+      </div>
+      <div class="award-card reveal d1">
+        <img src="img/phhinge/5f8ab440f33f3.jpg" alt="Jiaxing Famous Brand — Lion Ball Trademark" loading="lazy">
+        <div class="award-card-label">嘉兴市著名商标<br>狮球牌 Lion Ball Brand</div>
+      </div>
+      <div class="award-card reveal d2">
+        <img src="img/phhinge/5f8aaf4a6d603.jpg" alt="Jiaxing Famous Brand Product" loading="lazy">
+        <div class="award-card-label">嘉兴名牌产品<br>Jiaxing Famous Brand</div>
+      </div>
+      <div class="award-card reveal d3">
+        <img src="img/phhinge/5f8aaf36c2f91.jpg" alt="Jiaxing Key Export Enterprise" loading="lazy">
+        <div class="award-card-label">嘉兴市外贸出口<br>重点企业</div>
       </div>
     </div>
   </div>
@@ -298,7 +415,7 @@
       <!-- 01 Pressing -->
       <div class="workshop-item reveal">
         <div class="workshop-photo">
-          <img src="img/4af533fcb01ea7e97c02aa66dd357814.jpg" alt="Pressing & Stamping Workshop" loading="lazy" style="object-position: top;">
+          <img src="img/2439c7dc2d29e9854c9b81fa8f0f5d50.jpg" alt="Pressing & Stamping Workshop — BOXIN Presses" loading="lazy">
         </div>
         <div class="workshop-info">
           <div class="workshop-num">01</div>
@@ -316,12 +433,8 @@
 
       <!-- 02 Polishing -->
       <div class="workshop-item reverse reveal">
-        <div class="workshop-icon-panel">
-          <div class="wi-num">02</div>
-          <div class="wi-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-          </div>
-          <div class="wi-label">Polishing</div>
+        <div class="workshop-photo">
+          <img src="img/1de33abd3ea9973f31dd1396e982d366.jpg" alt="Polishing & Surface Preparation Workshop" loading="lazy">
         </div>
         <div class="workshop-info">
           <div class="workshop-num">02</div>
@@ -340,7 +453,7 @@
       <!-- 03 Electroplating -->
       <div class="workshop-item reveal">
         <div class="workshop-photo">
-          <img src="img/4af533fcb01ea7e97c02aa66dd357814.jpg" alt="Electroplating Lines" loading="lazy" style="object-position: bottom;">
+          <img src="img/8405194d0ac877331a39dbd33b1c5d2d.jpg" alt="Electroplating & Surface Treatment Lines" loading="lazy">
         </div>
         <div class="workshop-info">
           <div class="workshop-num">03</div>
@@ -359,12 +472,8 @@
 
       <!-- 04 Assembly -->
       <div class="workshop-item reverse reveal">
-        <div class="workshop-icon-panel">
-          <div class="wi-num">04</div>
-          <div class="wi-icon">
-            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <div class="wi-label">Assembly & QC</div>
+        <div class="workshop-photo">
+          <img src="img/26700bca2b36519948da50cbab625afd.jpg" alt="Assembly & Quality Control Workshop" loading="lazy">
         </div>
         <div class="workshop-info">
           <div class="workshop-num">04</div>
@@ -384,7 +493,7 @@
       <!-- 05 Packaging & Warehouse -->
       <div class="workshop-item reveal">
         <div class="workshop-photo">
-          <img src="img/57319b285ebb012fe8e9c56c8a75c29b.jpg" alt="Packaging and Warehouse" loading="lazy">
+          <img src="img/3814e66088097833674bde87efc01792.jpg" alt="Packaging & Finished Goods Warehouse" loading="lazy">
         </div>
         <div class="workshop-info">
           <div class="workshop-num">05</div>
@@ -447,6 +556,40 @@
   </div>
 </section>
 
+<!-- CERT DOCUMENTS -->
+<section class="cert-docs-section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Certifications & Testing</span>
+      <h2>Every Claim, Backed by Documentation</h2>
+      <p class="lead" style="max-width:560px;margin-top:12px;">ISO 9001 quality management, UL listing for fire-door spring hinges, and BHMA compliance testing — all on file across both Thailand and China facilities.</p>
+    </div>
+    <div class="cert-docs-grid">
+      <div class="cert-doc-card reveal">
+        <img src="img/f1c26af04d50584a9dd3fc49a30e5134.jpg" alt="ISO 9001:2015 Certificate — Suilun Hardware Thailand" loading="lazy">
+        <div class="cert-doc-label">
+          <span class="cert-badge">ISO</span>
+          <span>ISO 9001:2015 — Suilun Hardware (Thailand) Co., Ltd.</span>
+        </div>
+      </div>
+      <div class="cert-doc-card reveal d1">
+        <img src="img/49ba8bfce2fbf5711704ff036a15609a.jpg" alt="UL Certificate of Compliance — Fire Door Spring Hinge" loading="lazy">
+        <div class="cert-doc-label">
+          <span class="cert-badge">UL</span>
+          <span>UL Certificate — Swinging Fire Door Closers (ANSI/BHMA A156.17)</span>
+        </div>
+      </div>
+      <div class="cert-doc-card reveal d2">
+        <img src="img/6ffa8a18a37285d4652741d9c0087470.jpg" alt="ISO 9001:2015 Certificate — Zhejiang Pinghu Hinge Co., Ltd." loading="lazy">
+        <div class="cert-doc-label">
+          <span class="cert-badge">ISO</span>
+          <span>ISO 9001:2015 — Zhejiang Pinghu Hinge Co., Ltd.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CERTIFICATIONS -->
 <section class="cert-section">
   <div class="wrap">
@@ -458,18 +601,18 @@
     <div class="cert-grid">
       <div class="cert-card reveal">
         <div class="ci">🏅</div>
-        <h4>ISO 9001</h4>
-        <p>International standard for quality management systems. Covers design, production, testing, and delivery.</p>
+        <h4>ISO 9001:2015</h4>
+        <p>Quality management system certified across both Thailand and China facilities. Valid through 2026–2029.</p>
       </div>
       <div class="cert-card reveal d1">
         <div class="ci">🔥</div>
         <h4>UL Listed</h4>
-        <p>Underwriters Laboratories listing for commercial and spring hinges used in fire-rated door assemblies.</p>
+        <p>Underwriters Laboratories listing GVEV.R25856 for self-closing spring hinges used in fire-rated door assemblies.</p>
       </div>
       <div class="cert-card reveal d2">
-        <div class="ci">⭐</div>
-        <h4>6S Management</h4>
-        <p>Sort, Set, Shine, Standardize, Sustain, Safety — gold-standard lean manufacturing site management.</p>
+        <div class="ci">✅</div>
+        <h4>BHMA Compliant</h4>
+        <p>Full compliance testing per ANSI/BHMA A156.17 — covering friction, cycle, overload, hinge pin rise, and 1,000-hour salt spray.</p>
       </div>
     </div>
   </div>
