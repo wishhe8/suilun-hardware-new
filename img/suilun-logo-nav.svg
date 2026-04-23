@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70">
+  <!-- Orange accent square between i and L -->
+  <rect x="119" y="3" width="16" height="11" rx="2" fill="#F59E0B"/>
+  <!-- SuiLun: light gray outline painted first, then dark gray fill on top -->
+  <text
+    x="6" y="62"
+    font-family="Inter, Arial Black, 'Helvetica Neue', sans-serif"
+    font-weight="900"
+    font-size="58"
+    letter-spacing="-1"
+    fill="#EDEAE8"
+    stroke="#EDEAE8"
+    stroke-width="10"
+    stroke-linejoin="round"
+    paint-order="stroke">SuiLun</text>
+  <text
+    x="6" y="62"
+    font-family="Inter, Arial Black, 'Helvetica Neue', sans-serif"
+    font-weight="900"
+    font-size="58"
+    letter-spacing="-1"
+    fill="#555555">SuiLun</text>
+</svg>
