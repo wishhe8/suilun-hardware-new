@@ -2,24 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --orange:     #E8640A;
-  --orange-d:   #c8540a;
-  --orange-l:   #F4762A;
-  --orange-pale:#FFF3EB;
-  --dark:       #1A1A1A;
-  --dark2:      #2D2D2D;
-  --gray-700:   #4A4A4A;
-  --gray-500:   #737373;
-  --gray-400:   #9A9A9A;
-  --gray-200:   #E8E8E8;
-  --gray-100:   #F4F4F2;
-  --gray-50:    #FAFAF8;
+  --orange:     #F97316;
+  --orange-d:   #EA6C00;
+  --orange-l:   #FB923C;
+  --orange-pale:#FFF7ED;
+  --dark:       #1F2A44;
+  --dark2:      #2D3E5E;
+  --gray-700:   #374151;
+  --gray-500:   #6B7280;
+  --gray-400:   #9CA3AF;
+  --gray-200:   #E5E7EB;
+  --gray-100:   #F3F4F6;
+  --gray-50:    #F9FAFB;
   --white:      #FFFFFF;
-  --border:     #E2E2E0;
+  --border:     #E5E7EB;
   --r:          10px;
   --r2:         18px;
-  --shadow:     0 2px 16px rgba(0,0,0,0.08);
-  --shadow-lg:  0 12px 48px rgba(0,0,0,0.14);
+  --shadow:     0 2px 16px rgba(31,42,68,0.10);
+  --shadow-lg:  0 12px 48px rgba(31,42,68,0.16);
   --font:       'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -60,7 +60,7 @@ section { padding: 104px 0; }
 /* ── NAV ─────────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-  background: rgba(26,26,26,0.95);
+  background: rgba(31,42,68,0.97);
   backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255,255,255,0.07);
   transition: background 0.3s;
