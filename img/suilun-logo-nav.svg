@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70">
-  <!-- Orange accent above the "i" (measured: i spans x≈80-96) -->
-  <rect x="80" y="2" width="18" height="12" rx="2" fill="#F59E0B"/>
-  <!-- Light gray outline -->
+  <!-- Light gray outline layer -->
   <text
     x="6" y="62"
     font-family="Inter, Arial Black, 'Helvetica Neue', sans-serif"
@@ -13,7 +11,7 @@
     stroke-width="10"
     stroke-linejoin="round"
     paint-order="stroke">SuiLun</text>
-  <!-- Dark gray fill -->
+  <!-- Dark gray fill layer -->
   <text
     x="6" y="62"
     font-family="Inter, Arial Black, 'Helvetica Neue', sans-serif"
@@ -21,4 +19,6 @@
     font-size="58"
     letter-spacing="-1"
     fill="#555555">SuiLun</text>
+  <!-- Orange square replaces the dot of "i" (on top of text) -->
+  <rect x="80" y="10" width="16" height="13" rx="2" fill="#F59E0B"/>
 </svg>
