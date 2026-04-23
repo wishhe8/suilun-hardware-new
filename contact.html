@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Suilun Hardware</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero {
+  background: var(--dark); padding: 140px 0 72px;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content:''; position:absolute; inset:0;
+  background-image: url('img/thai-factory-entrance.png');
+  background-size: cover; background-position: center;
+  filter: brightness(0.18);
+}
+.page-hero-content { position: relative; z-index: 2; }
+.page-hero .eyebrow { color: var(--orange); }
+.page-hero h1 { color: white; font-size: clamp(36px,5vw,64px); margin-bottom: 16px; }
+.page-hero p { color: rgba(255,255,255,0.45); font-size: 18px; max-width: 560px; }
+
+.contact-section { background: white; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+}
+@media(max-width:900px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.contact-info { display: flex; flex-direction: column; gap: 32px; }
+.contact-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px; border: 1.5px solid var(--border);
+  border-radius: var(--r2); transition: all 0.2s;
+}
+.contact-card:hover { border-color: var(--orange); box-shadow: var(--shadow); }
+.contact-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--orange); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.contact-icon svg { width: 22px; height: 22px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-card h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--gray-400); margin-bottom: 6px; }
+.contact-card a, .contact-card p { font-size: 16px; font-weight: 600; color: var(--dark); text-decoration: none; line-height: 1.5; }
+.contact-card a:hover { color: var(--orange); }
+
+.contact-form { background: var(--gray-50); border: 1.5px solid var(--border); border-radius: var(--r2); padding: 40px; }
+.contact-form h3 { font-size: 22px; margin-bottom: 8px; }
+.contact-form p { color: var(--gray-500); font-size: 15px; margin-bottom: 28px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 12px 16px;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-size: 15px; font-family: inherit; color: var(--dark);
+  background: white; outline: none; transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--orange); }
+.form-group textarea { min-height: 120px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:600px) { .form-row { grid-template-columns: 1fr; } }
+.form-submit {
+  width: 100%; padding: 14px;
+  background: var(--orange); color: white;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.form-submit:hover { background: #c95500; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-wrap">
+    <a href="index.html" class="logo">
+      <img src="img/suilun-logo-nav.png" alt="SuiLun" class="logo-img">
+    </a>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="factory.html">Factory</a>
+      <a href="index.html#partners">Clients</a>
+      <a href="contact.html" class="nav-cta active">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap page-hero-content">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Contact Us</h1>
+    <p>Ready to source with confidence? Our team responds fast.</p>
+  </div>
+</div>
+<div class="orange-rule"></div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Left: contact info -->
+      <div class="contact-info reveal">
+        <div>
+          <span class="eyebrow">Reach Out</span>
+          <h2 style="margin-top:8px;">Let's Work Together</h2>
+          <p style="color:var(--gray-500);font-size:16px;line-height:1.75;margin-top:16px;">Whether you're a retailer, distributor, or contractor — tell us what you need and we'll get back to you promptly.</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:wish@globallionsf.com">wish@globallionsf.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>US Office</h4>
+            <p>401 Harrison St., 15C<br>San Francisco, CA, USA</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Factory — Thailand</h4>
+            <p>Chonburi Province<br>Eastern Economic Corridor, Thailand</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Factory — China</h4>
+            <p>Suilun Industrial Park<br>Pinghu City, Zhejiang, China</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: inquiry form -->
+      <div class="contact-form reveal d1">
+        <h3>Send an Inquiry</h3>
+        <p>Fill out the form and we'll get back to you within 24 hours.</p>
+        <form action="mailto:wish@globallionsf.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" name="company" placeholder="Your Company">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="john@company.com">
+          </div>
+          <div class="form-group">
+            <label>Product Interest</label>
+            <select name="product">
+              <option value="">Select a category...</option>
+              <option>Residential Hinges</option>
+              <option>Commercial Hinges</option>
+              <option>Spring Hinges</option>
+              <option>Cabinet Hardware</option>
+              <option>Drawer Slides</option>
+              <option>Shelf Brackets</option>
+              <option>Door Hardware</option>
+              <option>Custom / OEM</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your requirements — volumes, finishes, timeline..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Inquiry →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/suilun-logo-nav.png" alt="SuiLun" style="height:36px;width:auto;display:block;margin-bottom:14px;">
+        <p>America's #1 hinge producer for over 30 years — now a complete hardware partner supplying the pros who build America.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="products.html#residential">Residential Hinges</a>
+        <a href="products.html#commercial">Commercial Hinges</a>
+        <a href="products.html#spring">Spring Hinges</a>
+        <a href="products.html#cabinet">Cabinet Hardware</a>
+        <a href="products.html#drawer">Drawer Slides</a>
+        <a href="products.html#shelf">Shelf Brackets</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="factory.html">Our Factories</a>
+        <a href="index.html#partners">Partners</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="#">🇺🇸 San Francisco, CA, USA</a>
+        <a href="#">🇹🇭 Chonburi, Thailand</a>
+        <a href="#">🇨🇳 Pinghu, Zhejiang, China</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Suilun Hardware (Thailand) Co., Ltd. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
