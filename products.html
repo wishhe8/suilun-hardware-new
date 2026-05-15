@@ -66,7 +66,7 @@
   overflow: hidden; background: white; transition: all 0.25s; cursor: pointer;
 }
 .prod-card:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(232,100,10,0.1); }
-.prod-img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #f8f8f8; }
+.prod-img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #f8f8f8; }
 .prod-body { padding: 16px; }
 .prod-name { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 4px; line-height: 1.35; }
 .prod-spec { font-size: 12px; color: var(--gray-400); line-height: 1.45; }
@@ -97,7 +97,6 @@
 <nav>
   <div class="wrap nav-wrap">
     <a href="index.html" class="logo">
-      
       <img src="img/suilun-logo-nav.png" alt="SuiLun" class="logo-img">
     </a>
     <div class="nav-menu">
@@ -129,8 +128,8 @@
       <button class="filter-btn" onclick="filterCat('commercial',this)">Commercial Hinges</button>
       <button class="filter-btn" onclick="filterCat('spring',this)">Spring Hinges</button>
       <button class="filter-btn" onclick="filterCat('specialty',this)">Specialty Hinges</button>
+      <button class="filter-btn" onclick="filterCat('continuous',this)">Continuous Hinges</button>
       <button class="filter-btn" onclick="filterCat('cabinet',this)">Cabinet Hardware</button>
-      <button class="filter-btn" onclick="filterCat('drawer',this)">Drawer Slides</button>
       <button class="filter-btn" onclick="filterCat('shelf',this)">Shelf Brackets</button>
       <button class="filter-btn" onclick="filterCat('doorhardware',this)">Door Hardware</button>
     </div>
@@ -138,8 +137,7 @@
 </div>
 
 <div>
-
-  <!-- ── RESIDENTIAL HINGES ─────────────────────────── -->
+  <!-- ── RESIDENTIAL HINGES ────────────── -->
   <section class="cat-section" id="residential" data-cat="residential">
     <div class="wrap">
       <div class="cat-header">
@@ -147,69 +145,95 @@
         <span class="cat-tag">#1 in the US Market</span>
       </div>
       <div class="prod-grid">
-
-        <!-- Wide hero -->
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/c347437634a7924a833f5e36b2ae55d3.jpg" alt="Round Corner Hinge" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="4&quot;x4&quot;x2.2mm||4&quot;x4&quot;x2.5mm||4&quot;x4-1/4&quot;x2.5mm">
+          <img class="prod-img" src="img/products/image12.png" alt="Security Hinge" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Residential Door Hinge Collection</div>
-            <div class="prod-spec">Our flagship line — trusted by US builders for over 30 years. Square corner, round corner, ball-bearing, and specialty styles in steel, stainless, and zinc. Multiple finishes including satin nickel, oil-rubbed bronze, and matte black.</div>
-            <div class="material-row">
-              <span class="mtag">Steel</span><span class="mtag">Stainless</span><span class="mtag">Zinc</span><span class="mtag">50+ Finishes</span>
-            </div>
+            <div class="prod-name">Security Hinge</div>
           </div>
         </div>
-
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/987623bb5fa32a2aaf404b2c9ffb2390.jpg" alt="Square Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Square Corner Hinge</div><div class="prod-spec">3.5" & 4" standard square corner</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="2.0&#x27;&#x27;x2.0&#x27;&#x27;x1.2mm||2.0&#x27;&#x27;x2.0&#x27;&#x27;x1.5mm||2.5&#x27;&#x27;x2.5&#x27;&#x27;x1.2mm||2.5&#x27;&#x27;x2.5&#x27;&#x27;x1.8mm||3.0&#x27;&#x27;x3.0&#x27;&#x27;x1.4mm||3.0&#x27;&#x27;x3.0&#x27;&#x27;x2.0mm||3.5&#x27;&#x27;x3.5&#x27;&#x27;x1.4mm||3.5&#x27;&#x27;x3.5&#x27;&#x27;x1.8mm||3.5&#x27;&#x27;x3.5&#x27;&#x27;x2.0mm||3.5&#x27;&#x27;x3.5&#x27;&#x27;x2.2mm||3.5&#x27;&#x27;x3.5&#x27;&#x27;x2.5mm||4.0&#x27;&#x27;x4.0&#x27;&#x27;x1.4mm||4.0&#x27;&#x27;x4.0&#x27;&#x27;x1.8mm||4.0&#x27;&#x27;x4.0&#x27;&#x27;x2.0mm||4.0&#x27;&#x27;x4.0&#x27;&#x27;x2.2mm||4.0&#x27;&#x27;x4.0&#x27;&#x27;x2.5mm">
+          <img class="prod-img" src="img/products/image2.png" alt="Square Corner Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Square Corner Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/c347437634a7924a833f5e36b2ae55d3.jpg" alt="Round Corner Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Round Corner Hinge</div><div class="prod-spec">Radius corner, residential standard</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="3&quot;X3&quot;X2mm  1/4“R||3&quot;X3&quot;X2mm  5/8“R||3.5&quot;X3.5&quot;X2.2mm  1/4“R||3.5&quot;X3.5&quot;X2.2mm  5/8“R||4&quot;X4&quot;X2.2mm  1/4“R||4&quot;X4&quot;X2.2mm  5/8“R||4&quot;×4&quot;×2.5mm  1/4“R||4&quot;×4&quot;×2.5mm  5/8“R">
+          <img class="prod-img" src="img/products/image1.png" alt="Round Corner Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Round Corner Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/f4a41f6efe85c7502da05d63c3787121.jpg" alt="Light Iron Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Light Iron Hinge</div><div class="prod-spec">Lightweight, interior door applications</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="4&quot;X4&quot;X2.2mm  5/8&quot;R - SQ||4&quot;×4&quot;×2.5mm  5/8&quot;R - SQ||4&quot;×4-1/4&quot;×2.5mm  5/8&quot;R - SQ">
+          <img class="prod-img" src="img/products/image14.jpeg" alt="Square-Round Hinge 5/8&quot;R - SQ Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Square-Round Hinge 5/8&quot;R - SQ Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/ba54d3d7639759e9ea7e1c2eb137f3d7.jpg" alt="Heavy Iron Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Heavy Iron Hinge</div><div class="prod-spec">Solid iron, exterior & heavy doors</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="3/4″(19×17×0.6mm)||1.5″(38×25×0.7mm)||1.5″(38×25×0.8mm)||1.5″(38×25×0.9mm)||2″(48.5×28×0.7mm)||2″(50×32 ×0.7mm)||2″(50×32×0.9mm)||2.5″(61×30×0.7mm)||2.5″(63.5×32×0.9mm)||2.5″(63.5×32×1mm)||3″(73×36×0.8mm)||3″(75×39×0.9mm)||3.5″(86×45×1.1mm)||3.5″(89×47×0.9mm)||3.5″(89×47×1.1mm)||4″(97×48×1mm)||4″(100×51×1.15mm)">
+          <img class="prod-img" src="img/products/image3.png" alt="Light Iron Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Light Iron Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/d29472ee52b9a52a4a163d2a195485d0.jpg" alt="Lift-off Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Lift-off Hinge</div><div class="prod-spec">Removable pin, easy door removal</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="1″（25×23×0.9mm）||1″（25×23×1.0mm）||1.5″（38×28×1.0mm）||1.5″（38×30×1.0mm）||1.5″（38×30×1.2mm）||2″（50×35×0.9mm）||2″（50×35×1.05mm）||2″（50×35×1.2mm）||2″（50×37×1.2mm）||2.5″（63.5×38×0.9mm)||2.5″（63.5×38×1.1mm)||2.5″（63.5×40×1.05mm）||2.5″（63.5×40×1.3mm）||2.5″（63.5×40×1.4mm）">
+          <img class="prod-img" src="img/products/image4.png" alt="Heavy Iron Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Heavy Iron Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/f8943d39f62aae35da999a01ecb72491.jpg" alt="Bending Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Bending Hinge</div><div class="prod-spec">Adjustable angle mounting</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="80×15×1.5mm||40×50×1.2mm||30×40×1.1mm||75×50×1.3mm||63.5×42×1.2mm||120×87×2mm||120×87×1.5mm||120×68×2mm||120×68×1.5mm">
+          <img class="prod-img" src="img/products/image5.png" alt="Lift-off Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Lift-off Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/2ea2ac8f8d4e526dbe239d6efe59fd68.jpg" alt="Ball Bearing Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Ball Bearing Hinge</div><div class="prod-spec">Smooth operation, reduced wear</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="3.5&#x27;&#x27;x3.0&#x27;&#x27;x2.0mm||3.5&#x27;&#x27;x3.0&#x27;&#x27;x2.3mm||3.5&#x27;&#x27;x3.0&#x27;&#x27;x2.5mm, 2BB||3.5&#x27;&#x27;x3.0&#x27;&#x27;x2.5mm, Φ7 2BB||3.5&#x27;&#x27;x3.0&#x27;&#x27;x3.0mm, 2BB||4.0&#x27;&#x27;x3.5&#x27;&#x27;x2.5mm, Φ7 4BB||4.0&#x27;&#x27;x3.5&#x27;&#x27;x3.0mm,4BB">
+          <img class="prod-img" src="img/products/image6.png" alt="Bending Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Bending Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/c35001d7146b57234eb2965ef1ff818d.jpg" alt="Stainless Steel Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Stainless Steel Hinge</div><div class="prod-spec">Corrosion-resistant, exterior grade</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="4.5″×4.0″×3.4mm with safety screw||4.5″×4.5″×3.4mm with screw||4.5″×4.0″×3.4mm with safety screw||4.0″×3.0″×3.0mm with safety screw||4.0″×3.0″×3.0mm||4.0″×3.5″×3.1mm||3.5″×3.5″×3.0mm unassembled||4″×3″×1.8mm||4″×3″×2.0mmwith crown tip||4″×3″×2.0mm||4″×3″×2.0mm||4″×3.5″×2.7mm||4″×3″×1.8mm||4″×3.5″×2.5mm||4″×3.5″×2.5mm||4″×3.5″×2.5mm||4″×3.5″×2.5mm||4″×3.5″×2.9mm||4″×3″×2.5mm||4″×3.5″×2.3mm">
+          <img class="prod-img" src="img/products/image7.png" alt="Ball-head Square Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Ball-head Square Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/a6f6a37470d98f18bbc5f8ba5cd38e27.jpg" alt="Flush Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Flush Hinge</div><div class="prod-spec">Flat profile, face-mount application</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="4″×3″×2mmnylon washer||4″×3″×1.5mmnylon washer||4″×3″×1.5mmnylon washer without screw||4″×3.5″×2.5mmnylon washer bending||4″×3.5″×2.1mm nylon washer||4″×3″×2mmnylon washer||4″×4″×2.2mmnylon washer||4&quot;×3.5&quot;×2&quot;||4″×3.5″×2.5mmlron ring||4″×4″×2.7 mmlron ring with crown tip||4″×3″×1.4mmnylon washer||4″×3.5″×2.7mmlron ring||4″×3.5″×2.7mmlron ring||4″×3″×2.0mmnylon washer||4″×4″×2.8mmlron ring flat pin||4″×3.5″×2.0mmnylon washer||4″×3.5″×3.0mmlron ring||4″×4″×2.7mmlron ring with grown tip||4″×4″×2.5mmlron ring||4″×4″×2.5mmnylon washer">
+          <img class="prod-img" src="img/products/image8.png" alt="Nylon Steel Ring Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Nylon Steel Ring Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/e658a99c885c6be2ad9a37e5c0ab2b44.jpg" alt="H Iron Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">"H" Iron Hinge</div><div class="prod-spec">Classic H-profile, surface mount</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="90×45×1.5mm||89×57×1.6 mm lift-off right||89×57×1.6 mmlift-off left||89×57×2.0 mmround corner unassembled||89×57×2.0 mm||89×57×2.2 mmround corner||89×57×2.2 mmround corner||89×57×1.6 mmround corner||89×57×1.6 mmround corner||89×63.5×2.2mmbending||89×57×1.6 mmlift-off right||89×57×1.6 mmlift-off left||89×55×1.6 mm||89×60×1.6 mmfix pin with stud||85×60×1.6mmfix pin||85×60×1.6mmlooes pin||85×80×1.2 mm||85×45×1.2 mm||75×50×1.6 mm concave||75×50×1.6 mm">
+          <img class="prod-img" src="img/products/image9.png" alt="Australian Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Australian Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/2d88ef7efac21eefe08419b0d475ea54.jpg" alt="European H Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">European "H" Hinge</div><div class="prod-spec">Continental standard, adjustable</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="4.0″×5.0″×2.5mm with safety screw||95×55×1.8mm||95×51.5×1.25mm||95×53.5×1.6mm||95×55×1.8mm||95×55×2mm||95×53.5×1.4mm||95×53.5×1.6mm||95×55×1.8mm||95×55×2.0mmround corner with crown tip||95×53.5×1.6mm||95×51.5×1.4mm||95×55×2mm||95×51.5×1.25mm||95×51.5×1.20mm||95×55×2mm||95×55×2mm||80×46.5×1.4mm||80×46.5×1.6mm||80×47.5×1.6mm">
+          <img class="prod-img" src="img/products/image10.png" alt="&quot;H&quot; Iron Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">&quot;H&quot; Iron Hinge</div>
+          </div>
         </div>
-
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="95×45×2.5mmsquare corner with flat head||95×45×2.2mmsquare corner||95×55×2mmsquare corner||95×55×2mmsquare corner||95×45×2mmsquare corner||95×55×2.5mm||95×45×2mmsquare corner||95×55×2mmsquare corner||95×45×2.2mmsquare corner||95×45×2mm round corner||80×40×2mmround corner||80×40×2.2mm||80×40×2.2mmround corner||80×45×2mmsquare corner||80×45×2mmround corner||140×55×2.5mmround corner||140×55×3mmsquare corner with flat head||140×55×2.5mm square corner||140×55×2.5mm round corner||140×55×2.5mmsquare corner">
+          <img class="prod-img" src="img/products/image11.png" alt="European &quot;H&quot; Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">European &quot;H&quot; Hinge</div>
+          </div>
+        </div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="102×93×2.7 mm||102×89×2.5 mm||102×89×2.5 mm||100×69×1.8 mm||89×74×1.8 mm 37#||89×77×1.8mm||89×77×1.8 mm 36||89×78×1.8 mm 35#||89×53.5×1.8 mm||75×42.5×1.7 mm||75×47.5×1.7 mm||63.5×36×1.4 mm||50×37×1.25mm||38×30×1mm">
+          <img class="prod-img" src="img/products/image13.png" alt="Flush Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Flush Hinge</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── COMMERCIAL HINGES ──────────────────────────── -->
+  <!-- ── COMMERCIAL HINGES ────────────── -->
   <section class="cat-section" id="commercial" data-cat="commercial">
     <div class="wrap">
       <div class="cat-header">
@@ -217,60 +241,17 @@
         <span class="cat-tag">UL Listed Available</span>
       </div>
       <div class="prod-grid">
-
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="Commercial Hinge" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="3.5&quot; × 3.5&quot; × 3.0mm — 2BB||4.0&quot; × 4.0&quot; × 3.3mm — 2BB||4.5&quot; × 4.0&quot; × 3.4mm — 2BB||4.5&quot; × 4.5&quot; × 3.4mm — 2BB||4.5&quot; × 4.5&quot; × 4.6mm — 4BB">
+          <img class="prod-img" src="img/products/image15.png" alt="Commercial Grade Hinges" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Commercial Grade Hinge System</div>
-            <div class="prod-spec">BHMA Grade 1 certified for high-traffic environments — offices, schools, hospitals, and public buildings. UL listed (Test Report R41745) for fire-rated door assemblies. 2.5 million cycle tested. MOQ 3,000 pcs · Lead time 50 days · FOB Laem Chabang.</div>
-            <div class="material-row">
-              <span class="mtag">BHMA Grade 1</span><span class="mtag">UL R41745</span><span class="mtag">2.5M Cycles</span><span class="mtag">2BB / 4BB</span>
-            </div>
+            <div class="prod-name">Commercial Grade Hinges</div>
           </div>
         </div>
-
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="3.5 Commercial Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">3.5" × 3.5" × 3.0mm — 2BB</div><div class="prod-spec">BHMA Grade 1 · Standard residential-commercial · US19 / US15 / US26D</div></div>
-        </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="4.0 Commercial Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.0" × 4.0" × 3.3mm — 2BB</div><div class="prod-spec">BHMA Grade 1 · Heavy commercial door · US19 / US15 / US26D / US32D</div></div>
-        </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="4.5x4.0 Commercial Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.5" × 4.0" × 3.4mm — 2BB</div><div class="prod-spec">BHMA Grade 1 · Wide-frame commercial · US19 / US15 / US26D</div></div>
-        </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="4.5x4.5 Commercial Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.5" × 4.5" × 3.4mm — 2BB</div><div class="prod-spec">BHMA Grade 1 · Full commercial spec · US19 / US15 / US26D / US32D</div></div>
-        </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/6680ef01e1f084ab9c419d79f8d6a4d5.jpg" alt="4.5x4.5 4BB Commercial Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.5" × 4.5" × 4.6mm — 4BB</div><div class="prod-spec">BHMA Grade 1 · Heavy-duty 4 ball-bearing · US19 / US15 / US26D</div></div>
-        </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/6e8501fabc43a0bbd06396ecc8791bac.jpg" alt="Security Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Security Hinge</div><div class="prod-spec">Non-removable pin, anti-tamper</div></div>
-        </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/bcf28a4a2d67cc9165df21233ea3f287.jpg" alt="Ball-head Square Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Ball-head Square Hinge</div><div class="prod-spec">Heavy-duty ball-bearing commercial</div></div>
-        </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/d3448a7a5aac3ceea23a6924f52323d9.jpg" alt="Nylon Steel Ring Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Nylon Steel Ring Hinge</div><div class="prod-spec">Quiet operation, medical & office</div></div>
-        </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/85818530536c35915018206d8c5bb9a6.jpg" alt="Australian Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Australian Hinge</div><div class="prod-spec">Compliant with AS/NZS standards</div></div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── SPRING HINGES ──────────────────────────────── -->
+  <!-- ── SPRING HINGES ────────────── -->
   <section class="cat-section" id="spring" data-cat="spring">
     <div class="wrap">
       <div class="cat-header">
@@ -278,263 +259,240 @@
         <span class="cat-tag">UL Listed</span>
       </div>
       <div class="prod-grid">
-
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/aa87e4f6448f8d0ce8bfd99c285d1610.jpg" alt="UL Spring Hinge" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="3.5&quot; x 3.5&quot; x 2.7mm||BHMA Grade 1||Test report: R25856||Cycle: 2.5 million||4.0&quot; x 4.0&quot; x 2.7mm||BHMA Grade 1||Test report: R25856||Cycle: 2.5 million||4.0&quot; x 4.0&quot; x 3.3mm||BHMA Grade 1||Test report: R25856||Cycle: 2.5 million||4.5&quot; x 4.5&quot; x 3.4mm||BHMA Grade 1||Test report: R25856||Cycle: 2.5 million">
+          <img class="prod-img" src="img/products/image16.png" alt="UL Spring Hinge" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Spring Hinge Collection</div>
-            <div class="prod-spec">Self-closing hinges for fire doors and controlled-access entries. BHMA Grade 1 (Test Report R25856) · 2.5 million cycle tested · UL listed. Available in 3.5", 4.0", and 4.5" · Adjustable closing tension · MOQ 3,000 pcs · Lead time 60 days · FOB Laem Chabang.</div>
-            <div class="material-row">
-              <span class="mtag">BHMA Grade 1</span><span class="mtag">UL R25856</span><span class="mtag">2.5M Cycles</span><span class="mtag">Self-Closing</span>
-            </div>
+            <div class="prod-name">UL Spring Hinge</div>
           </div>
         </div>
-
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/aa87e4f6448f8d0ce8bfd99c285d1610.jpg" alt="3.5 Spring Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">3.5" × 3.5" × 2.7mm</div><div class="prod-spec">BHMA Grade 1 · Light commercial fire door · US19 / US15 / US26D</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="269301||90×300mm door spring with rod||269251||90×250mm door spring with rod||269201||90×200mm door spring with rod">
+          <img class="prod-img" src="img/products/image17.png" alt="Door Spring With Rod" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Door Spring With Rod</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/aa87e4f6448f8d0ce8bfd99c285d1610.jpg" alt="4.0 Spring Hinge Standard" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.0" × 4.0" × 2.7mm</div><div class="prod-spec">BHMA Grade 1 · Standard commercial fire door · US19 / US15 / US26D</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="26601||6″ double action spring||26501||5″ double action spring||26401||4″ double action spring||26301||3″ double action spring">
+          <img class="prod-img" src="img/products/image18.png" alt="Double Action Spring" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Double Action Spring</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/aa87e4f6448f8d0ce8bfd99c285d1610.jpg" alt="4.0 Spring Hinge Heavy" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.0" × 4.0" × 3.3mm</div><div class="prod-spec">BHMA Grade 1 · Heavy-duty 4.0" · US19 / US15 / US26D</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="26402||4″single action spring">
+          <img class="prod-img" src="img/products/image19.png" alt="Single Action Spring" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Single Action Spring</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/aa87e4f6448f8d0ce8bfd99c285d1610.jpg" alt="4.5 Spring Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">4.5" × 4.5" × 3.4mm</div><div class="prod-spec">BHMA Grade 1 · Heavy commercial fire door · US19 / US15 / US26D</div></div>
-        </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/b41e88b11323a0f3f3d2df1bd2555923.jpg" alt="Double Action Spring" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Double Action Spring</div><div class="prod-spec">Swings both directions, saloon-door style</div></div>
-        </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/bdf41da42c6997780721c7c3c401a486.jpg" alt="Single Action Spring" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Single Action Spring</div><div class="prod-spec">One-direction closing, standard screen</div></div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── SPECIALTY HINGES ───────────────────────────── -->
+  <!-- ── SPECIALTY &AMP; INDUSTRIAL HINGES ────────────── -->
   <section class="cat-section" id="specialty" data-cat="specialty">
     <div class="wrap">
       <div class="cat-header">
-        <div><span class="eyebrow">Category 04</span><h2>Specialty & Industrial Hinges</h2></div>
+        <div><span class="eyebrow">Category 04</span><h2>Specialty &amp; Industrial Hinges</h2></div>
         <span class="cat-tag">Custom Available</span>
       </div>
       <div class="prod-grid">
-
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/52ea559e9ac3cff6a44dd04b8ac8ee75.jpg" alt="Heavy Duty T Hinge" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="XD8001||2&quot;X1.2MM||3&quot;X1.2MM||4&quot;X1.2MM||5&quot;X1.4MM||6&quot;X1.4MM||8&quot;X1.7MM||10&quot;X1.7MM||12&quot;X1.7MM">
+          <img class="prod-img" src="img/products/image20.png" alt="Light Duty T Hinge" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">T Hinge & Industrial Specialty Range</div>
-            <div class="prod-spec">T hinges, strap hinges, welding hinges, and industrial fittings for gates, barn doors, utility panels, and heavy equipment. Available in light, medium, and heavy-duty configurations.</div>
-            <div class="material-row">
-              <span class="mtag">Galvanized</span><span class="mtag">Powder-Coated</span><span class="mtag">Weldable</span>
-            </div>
+            <div class="prod-name">Light Duty T Hinge</div>
           </div>
         </div>
-
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/93cdc8cc3d23827be9030eef3267e450.jpg" alt="Light Duty T Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Light Duty T Hinge</div><div class="prod-spec">Lightweight panels & cabinet doors</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="XD8005||4&quot;x1.8mm||5&quot;x1.8mm||6&quot;x2.2mm||8&quot;x2.2mm||10&quot;x2.5mm||12&quot;x2.5mm||14&quot;x2.5mm||16&quot;x2.5mm||18&quot;x2.5mm||20&quot;x2.5mm||22&quot;x2.5mm||24&quot;x2.5mm">
+          <img class="prod-img" src="img/products/image21.png" alt="Medium-Size T Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Medium-Size T Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/8c6aa1dbc100f03fef2fe96bc75f2742.jpg" alt="Medium T Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Medium-Size T Hinge</div><div class="prod-spec">Gates, shutters, utility doors</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="288002||8″heavy duty||286002||6″heavy duty||284002||4″heavy duty||281002||10″ heavy duty">
+          <img class="prod-img" src="img/products/image22.png" alt="Heavy Duty T Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Heavy Duty T Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/52ea559e9ac3cff6a44dd04b8ac8ee75.jpg" alt="Heavy Duty T Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Heavy Duty T Hinge</div><div class="prod-spec">Barn doors, farm gates, heavy loads</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="288008||8″heavy duty fiared tip||286003||6″heavy duty fiared tip||284003||4″ heavy duty fiared tip||281001||10″heavy duty fiared tip">
+          <img class="prod-img" src="img/products/image23.png" alt="Heavy Duty Faired Tip" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Heavy Duty Faired Tip</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/a240a4bc488b1b0390d510b2ba0f2bf8.jpg" alt="Heavy Duty Faired Tip" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Heavy Duty Faired Tip Hinge</div><div class="prod-spec">Decorative end, heavy-duty construction</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="">
+          <img class="prod-img" src="img/products/image28.png" alt="Strap Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Strap Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/e6ce0eee83300d656e549e845d11a2a6.jpg" alt="Strap Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Strap Hinge</div><div class="prod-spec">Long reach, decorative strap style</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="48*9.75(Φ5.75)||51.5*12.8(Φ7.7)||58.5*15.5(Φ8.75)||74.5*19.5(Φ11.8)||93*24.7(Φ15.55)">
+          <img class="prod-img" src="img/products/image24.png" alt="Welding Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Welding Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/c05701858e7a066e2f64013da6df6745.jpg" alt="Welding Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Welding Hinge</div><div class="prod-spec">Weld-on, industrial & structural use</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="24441||spring hinge 4″×4″×2.5mm||24351||spring hinge 31/2″×31/2″×2.5mm||24185||automobile hinge 185×65×4mm||24151||fancy head safety buckle hinge 150×82×3mm||24145||automobile hinge 145×65×4mm">
+          <img class="prod-img" src="img/products/image25.png" alt="Automobile Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Automobile Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/7cf283440db0b97dfaf455b10b436a33.jpg" alt="Automobile Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Automobile Hinge</div><div class="prod-spec">Vehicle panels, machinery enclosures</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="114020||4″×3.5″×3.0mmlron ring||579001||colour zinc plating iron fork nail||579000||adjiustable coulur zinc stair armres||529880||round-head plate||529870||square-head plate||13351||89×93×2.2mmsix finger hinge">
+          <img class="prod-img" src="img/products/image26.png" alt="Six-finger Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Six-finger Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/e6c2243ce195f09c8b1d556fa3e19c06.jpg" alt="Six-finger Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Six-finger Hinge</div><div class="prod-spec">Multi-leaf, high-load distribution</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="27003||54mm||27002||50mm||27001||42mm">
+          <img class="prod-img" src="img/products/image27.png" alt="Butterfly Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Butterfly Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/a071c9d56d4168a343e9d66f39ad24b1.jpg" alt="Butterfly Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Butterfly Hinge</div><div class="prod-spec">Decorative, lightweight applications</div></div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── CABINET HARDWARE ───────────────────────────── -->
+  <!-- ── CONTINUOUS HINGES ────────────── -->
+  <section class="cat-section" id="continuous" data-cat="continuous">
+    <div class="wrap">
+      <div class="cat-header">
+        <div><span class="eyebrow">Category 05</span><h2>Continuous Hinges</h2></div>
+        <span class="cat-tag">Piano Hinge Series</span>
+      </div>
+      <div class="prod-grid">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="852638||CD-CONT HNG 12X1-1/16&quot;NP                                                                  1-1/16&quot;x12&quot;||851971||CD-CONT HNG 48X1-1/2&quot;NP 5                                                                    1-1/2&quot;x48&quot;||852778||CD-CONT HNG 48X2&quot;NP                                                                       2&quot;x48&quot;">
+          <img class="prod-img" src="img/products/image29.png" alt="Continuous Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Continuous Hinge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CABINET HARDWARE ────────────── -->
   <section class="cat-section" id="cabinet" data-cat="cabinet">
     <div class="wrap">
       <div class="cat-header">
-        <div><span class="eyebrow">Category 05</span><h2>Cabinet Hardware</h2></div>
-        <span class="cat-tag">Kitchen & Bath</span>
+        <div><span class="eyebrow">Category 06</span><h2>Cabinet Hardware</h2></div>
+        <span class="cat-tag">Kitchen &amp; Bath</span>
       </div>
       <div class="prod-grid">
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/phhinge/62b574d4b60ad.jpg" alt="Cabinet Door Hinge" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="">
+          <img class="prod-img" src="img/products/image30.png" alt="Full Overlay Cabinet Hinge" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Cabinet Door Hinge</div>
-            <div class="prod-spec">Surface-mount cabinet hinges for kitchen cabinets, bathroom vanities, and furniture — the standard face-mount style widely used in North American residential cabinetry. Available in multiple leaf styles, offsets, and a full range of finishes including brass, nickel, chrome, and antique options.</div>
-            <div class="material-row">
-              <span class="mtag">Surface Mount</span><span class="mtag">Full Overlay</span><span class="mtag">Half Overlay</span><span class="mtag">Inset</span>
-            </div>
+            <div class="prod-name">Full Overlay Cabinet Hinge</div>
           </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/phhinge/62b574d4b60ad.jpg" alt="Overlay Cabinet Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Full Overlay Cabinet Hinge</div><div class="prod-spec">Door fully covers frame face — standard kitchen cabinet</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="">
+          <img class="prod-img" src="img/products/image30.png" alt="Half Overlay Cabinet Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Half Overlay Cabinet Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/phhinge/62b574d4b60ad.jpg" alt="Half Overlay Cabinet Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Half Overlay Cabinet Hinge</div><div class="prod-spec">Shared stile, two doors on one cabinet</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="">
+          <img class="prod-img" src="img/products/image30.png" alt="Inset Cabinet Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Inset Cabinet Hinge</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/phhinge/62b574d4b60ad.jpg" alt="Inset Cabinet Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Inset Cabinet Hinge</div><div class="prod-spec">Door sits flush inside frame opening</div></div>
-        </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/36f9967b72ab33b861617cc4ca386631.jpg" alt="Self-Closing Cabinet Hinge" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Self-Closing Cabinet Hinge</div><div class="prod-spec">Built-in spring close, kitchen & bath</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Part: CH191||Thickness: 1.2mm||Part: CH192||Thickness: 1.2mm||Thickness: 1.5mm||Part: CH194||Thickness: 1.2mm||Part: CH195||Thickness: 1.5mm||Part: CH196||Thickness: 1.5mm||Part: CH197||Thickness: 1.5mm||Part: CH198||Thickness: 1.5mm||Part: CH202||Thickness: 1.5mm||Part: CH206||Thickness: 1.5mm">
+          <img class="prod-img" src="img/products/image31.png" alt="Door Cabinet Self-closing Hinge" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Door Cabinet Self-closing Hinge</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── DRAWER SLIDES ──────────────────────────────── -->
-  <section class="cat-section" id="drawer" data-cat="drawer">
-    <div class="wrap">
-      <div class="cat-header">
-        <div><span class="eyebrow">Category 06</span><h2>Drawer Slide Systems</h2></div>
-        <span class="cat-tag">Soft-Close Available</span>
-      </div>
-      <div class="prod-grid">
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/99c5b8b6adf6629bff1b79e4503162da.jpg" alt="Drawer Slides" loading="lazy">
-          <div class="prod-body">
-            <div class="prod-name">Drawer Slide Systems</div>
-            <div class="prod-spec">Smooth, reliable slides for kitchens, offices, and industrial storage. Side-mount, bottom-mount, full-extension, and heavy-duty configurations. Soft-close available.</div>
-            <div class="material-row">
-              <span class="mtag">Full Extension</span><span class="mtag">Soft-Close</span><span class="mtag">Heavy Duty</span><span class="mtag">Side-Mount</span>
-            </div>
-          </div>
-        </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/99c5b8b6adf6629bff1b79e4503162da.jpg" alt="Standard Drawer Slide" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Standard Drawer Slide</div><div class="prod-spec">Side-mount, 3/4 & full extension</div></div>
-        </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/99c5b8b6adf6629bff1b79e4503162da.jpg" alt="Soft-Close Slide" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Soft-Close Slide</div><div class="prod-spec">Dampened close, premium feel</div></div>
-        </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/99c5b8b6adf6629bff1b79e4503162da.jpg" alt="Heavy Duty Slide" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Heavy Duty Slide</div><div class="prod-spec">100lb+ capacity, industrial grade</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SHELF BRACKETS ─────────────────────────────── -->
+  <!-- ── SHELF BRACKET SERIES ────────────── -->
   <section class="cat-section" id="shelf" data-cat="shelf">
     <div class="wrap">
       <div class="cat-header">
         <div><span class="eyebrow">Category 07</span><h2>Shelf Bracket Series</h2></div>
-        <span class="cat-tag">Retail & Residential</span>
+        <span class="cat-tag">Retail &amp; Residential</span>
       </div>
       <div class="prod-grid">
-        <div class="prod-card wide reveal">
-          <img class="prod-img" src="img/00ee4c044b6491098fe1223d69b84fda.jpg" alt="Bracket with Hook" loading="lazy">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Finish: WP||Size: 3*4/75*100||Thickness: 0.7mm||Size: 3*4/75*100||Thickness: 0.8mm||Size: 4*5/100*125||Thickness: 0.7mm||Size: 4*5/100*125||Thickness: 0.8mm||Size: 5*6/125*150||Thickness: 0.7mm||Size: 5*6/125*150||Thickness: 0.8mm||Size: 5*6/125*150||Thickness: 0.9mm||Size: 6*8/150*200||Thickness: 0.7mm||Size: 6*8/150*200||Thickness: 0.8mm||Size: 6*8/150*200||Thickness: 0.9mm||Size: 8*10/200*250||Thickness: 0.7mm||Size: 8*10/200*250||Thickness: 0.8mm||Size: 8*10/200*250||Thickness: 0.9mm||Size: 8*10/200*250||Thickness: 1mm||Size: 10*12/250*300||Thickness: 0.8mm||Size: 10*12/250*300||Thickness: 0.9mm||Size: 10*12/250*300||Thickness: 1mm||Size: 10*12/250*300||Thickness: 1.1mm||Size: 10*12/250*300||Thickness: 1.2mm||Size: 12*14/300*350||Thickness: 0.8mm||Size: 12*14/300*350||Thickness: 0.9mm||Size: 12*14/300*350||Thickness: 1mm||Size: 12*14/300*350||Thickness: 1.1mm||Size: 12*14/300*350||Thickness: 1.2mm">
+          <img class="prod-img" src="img/products/image50.jpeg" alt="Shelf Bracket" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Shelf Support & Bracket Systems</div>
-            <div class="prod-spec">From standard L-brackets to heavy-load floating shelf supports. Designed for retail shelving, residential closets, garage storage, and commercial display. Powder-coated steel in multiple finishes.</div>
-            <div class="material-row">
-              <span class="mtag">Powder-Coated Steel</span><span class="mtag">Multiple Sizes</span><span class="mtag">Heavy Load</span>
-            </div>
+            <div class="prod-name">Shelf Bracket</div>
           </div>
         </div>
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/b13a73256f436703a8262bdbdc300562.jpg" alt="Shelf Bracket" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Standard Shelf Bracket</div><div class="prod-spec">6", 8", 10", 12" sizes available</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Finish: WP||Size: 80*125||Thickness: 0.8mm||Size: 100*150||Thickness: 0.8mm||Size: 140*200||Thickness: 0.9mm||Size: 160*250||Thickness: 0.9mm||Size: 200*300||Thickness: 1.1mm||Size: 230*350||Thickness: 1.1mm||Size: 280*400||Thickness: 1.1mm">
+          <img class="prod-img" src="img/products/image52.jpeg" alt="Round Head Bracket" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Round Head Bracket</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
-          <img class="prod-img" src="img/00ee4c044b6491098fe1223d69b84fda.jpg" alt="Bracket with Hook" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Bracket With Hook</div><div class="prod-spec">Integrated hook for hanging storage</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Finish: spraying plastics||Size: 125×150||Thickness: 1.2mm||Size: 150×200||Thickness: 1.2mm||Size: 200×250||Thickness: 1.2mm||Size: 250×300||Thickness: 1.5mm||Size: 300×350||Thickness: 1.5mm">
+          <img class="prod-img" src="img/products/image51.jpeg" alt="Welded Bracket" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Welded Bracket</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/b13a73256f436703a8262bdbdc300562.jpg" alt="Floating Shelf Support" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Floating Shelf Support</div><div class="prod-spec">Concealed mount, clean finish</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Finish: spraying plastics||Size: 150*100*16||Thickness: 2mm||Size: 200*120*16||Thickness: 2mm||Size: 250*160*16||Thickness: 2mm||Size: 300*190*16||Thickness: 2mm||Size: 400*250*16||Thickness: 2mm||Size: 400*250*16||Thickness: 3mm||Size: 500*300*16||Thickness: 2mm||Size: 500*300*16||Thickness: 3mm">
+          <img class="prod-img" src="img/products/image53.png" alt="Flat Iron Bracket" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Flat Iron Bracket</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── DOOR HARDWARE ──────────────────────────────── -->
+  <!-- ── DOOR HARDWARE ────────────── -->
   <section class="cat-section" id="doorhardware" data-cat="doorhardware">
     <div class="wrap">
       <div class="cat-header">
-        <div><span class="eyebrow">Category 08</span><h2>Door Hardware & Accessories</h2></div>
-        <span class="cat-tag">Residential & Commercial</span>
+        <div><span class="eyebrow">Category 08</span><h2>Door Hardware &amp; Accessories</h2></div>
+        <span class="cat-tag">Residential &amp; Commercial</span>
       </div>
       <div class="prod-grid">
-
-        <div class="prod-card wide reveal">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Floor-mount &amp; wall-mount options">
           <img class="prod-img" src="img/6334ed99b23c69bdda5db6e1fd11aff1.jpg" alt="Iron Door Stop" loading="lazy">
           <div class="prod-body">
-            <div class="prod-name">Door Stops, Closers & Security</div>
-            <div class="prod-spec">A complete range of door control and security accessories — stops, bolts, guards, and fasteners designed to complement our hinge lines across residential and commercial applications.</div>
-            <div class="material-row">
-              <span class="mtag">Stainless Steel</span><span class="mtag">Iron</span><span class="mtag">Zinc</span>
-            </div>
+            <div class="prod-name">Iron Door Stop</div>
           </div>
         </div>
-
-        <div class="prod-card reveal d1">
-          <img class="prod-img" src="img/6334ed99b23c69bdda5db6e1fd11aff1.jpg" alt="Iron Door Stop" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Iron Door Stop</div><div class="prod-spec">Floor-mount & wall-mount options</div></div>
-        </div>
-        <div class="prod-card reveal d2">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Flexible coil, baseboard mount">
           <img class="prod-img" src="img/adff9796fc1a220cfdd34ed33630b0b7.jpg" alt="Spring Door Stop" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Spring Door Stop</div><div class="prod-spec">Flexible coil, baseboard mount</div></div>
+          <div class="prod-body">
+            <div class="prod-name">Spring Door Stop</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/5895c6e768d01a50eca37338c31bc484.jpg" alt="Door Spring with Rod" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Door Spring With Rod</div><div class="prod-spec">Screen door closer, adjustable</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Screen door closer, adjustable">
+          <img class="prod-img" src="img/5895c6e768d01a50eca37338c31bc484.jpg" alt="Door Spring With Rod" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Door Spring With Rod</div>
+          </div>
         </div>
-        <div class="prod-card reveal">
-          <img class="prod-img" src="img/96c97ccedbd11a9c7086b0965406f27f.jpg" alt="Iron Hasps and Staples" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Iron Hasps & Staples</div><div class="prod-spec">Shed, gate & storage locks</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Shed, gate &amp; storage locks">
+          <img class="prod-img" src="img/96c97ccedbd11a9c7086b0965406f27f.jpg" alt="Iron Hasps &amp; Staples" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Iron Hasps &amp; Staples</div>
+          </div>
         </div>
-        <div class="prod-card reveal d1">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Gate, door, &amp; shutter security">
           <img class="prod-img" src="img/a6deb6dff5e66e27e8dba74fba669d7d.jpg" alt="Tower Bolt" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Tower Bolt</div><div class="prod-spec">Gate, door, & shutter security</div></div>
+          <div class="prod-body">
+            <div class="prod-name">Tower Bolt</div>
+          </div>
         </div>
-        <div class="prod-card reveal d2">
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Residential security chain latch">
           <img class="prod-img" src="img/47f98828d9e0947ae68e029950ba46a7.jpg" alt="Chain Door Guard" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Chain Door Guard</div><div class="prod-spec">Residential security chain latch</div></div>
+          <div class="prod-body">
+            <div class="prod-name">Chain Door Guard</div>
+          </div>
         </div>
-        <div class="prod-card reveal d3">
-          <img class="prod-img" src="img/e971f934d28b526ee6f7b240aaa44b9f.jpg" alt="Screws" loading="lazy">
-          <div class="prod-body"><div class="prod-name">Screws & Fasteners</div><div class="prod-spec">Matched hardware sets for all products</div></div>
+        <div class="prod-card reveal" onclick="openModal(this)" data-specs="Matched hardware sets for all products">
+          <img class="prod-img" src="img/e971f934d28b526ee6f7b240aaa44b9f.jpg" alt="Screws &amp; Fasteners" loading="lazy">
+          <div class="prod-body">
+            <div class="prod-name">Screws &amp; Fasteners</div>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -592,10 +550,10 @@
 <!-- CTA -->
 <section style="background:var(--dark);padding:80px 0;text-align:center;">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--orange)">Custom & OEM</span>
+    <span class="eyebrow" style="color:var(--orange)">Custom &amp; OEM</span>
     <h2 style="color:white;margin-bottom:16px;">Don't See What You Need?</h2>
     <p style="color:rgba(255,255,255,0.45);font-size:18px;max-width:520px;margin:0 auto 40px;">We manufacture custom hardware to spec. Private label, custom finishes, packaging, and quantities — any hardware, at scale.</p>
-    <a href="contact.html" class="btn btn-primary">Request Custom Quote →</a>
+    <a href="contact.html" class="btn btn-primary">Request Custom Quote &rarr;</a>
   </div>
 </section>
 
@@ -613,7 +571,8 @@
         <a href="#commercial">Commercial Hinges</a>
         <a href="#spring">Spring Hinges</a>
         <a href="#specialty">Specialty Hinges</a>
-        <a href="#drawer">Drawer Slides</a>
+        <a href="#continuous">Continuous Hinges</a>
+        <a href="#cabinet">Cabinet Hardware</a>
         <a href="#shelf">Shelf Brackets</a>
         <a href="#doorhardware">Door Hardware</a>
       </div>
@@ -633,13 +592,42 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Suilun Hardware (Thailand) Co., Ltd.</p>
-      <p>A subsidiary of Pinghu Hinge Co., Ltd. · Pinghu City, Jiaxing, Zhejiang, China</p>
+      <p>&copy; 2025 Suilun Hardware (Thailand) Co., Ltd.</p>
+      <p>A subsidiary of Pinghu Hinge Co., Ltd. &middot; Pinghu City, Jiaxing, Zhejiang, China</p>
     </div>
   </div>
 </footer>
 
+<!-- PRODUCT MODAL -->
+<div id="prod-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;overflow-y:auto;padding:40px 20px;" onclick="if(event.target===this)closeModal()">
+  <div style="background:white;border-radius:16px;max-width:640px;margin:0 auto;overflow:hidden;">
+    <div style="padding:0;position:relative;">
+      <img id="modal-img" src="" alt="" style="width:100%;max-height:360px;object-fit:contain;background:#f8f8f8;padding:32px;">
+      <button onclick="closeModal()" style="position:absolute;top:16px;right:16px;background:white;border:none;border-radius:50%;width:36px;height:36px;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);">&#215;</button>
+    </div>
+    <div style="padding:28px 32px;">
+      <h3 id="modal-name" style="font-size:22px;font-weight:800;margin-bottom:16px;"></h3>
+      <div id="modal-specs" style="font-size:14px;color:#555;line-height:1.7;"></div>
+    </div>
+  </div>
+</div>
+
 <script>
+function openModal(card) {
+  document.getElementById('modal-img').src = card.querySelector('.prod-img').src;
+  document.getElementById('modal-name').textContent = card.querySelector('.prod-name').textContent;
+  const specs = card.dataset.specs ? card.dataset.specs.split('||') : [];
+  document.getElementById('modal-specs').innerHTML = specs.length
+    ? '<ul style="margin:0;padding-left:18px;">' + specs.map(s=>'<li>'+s+'</li>').join('') + '</ul>'
+    : '<p style="color:#999">Contact us for specifications.</p>';
+  document.getElementById('prod-modal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('prod-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 function filterCat(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
